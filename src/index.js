@@ -12,4 +12,4 @@ img.src = boat // 图片模块 dog1 作为 img 变量的 src 属性值
 img.width = 200
 root.append(img)
 // svg
-console.log('svg::', svg)
+console.log('svg::', sea)
