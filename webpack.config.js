@@ -1,5 +1,7 @@
 const path = require('path') // node.js 的路径模块
 const miniSVGDataURI = require('mini-svg-data-uri') // 最小化svg
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 module.exports = {
 	mode: 'development', // 'development' | 'production'
 	// entry: './src/index.js', // 入口文件（简写形式）
@@ -86,4 +88,10 @@ module.exports = {
 			},
 		],
 	},
+	plugins: [
+		new CleanWebpackPlugin(), // 在打包之前，清除输入目录下的文件
+    new HtmlWebpackPlugin({
+      template: "./src/index.html", // 这里设置自己模板文件
+    }),
+  ],
 }
