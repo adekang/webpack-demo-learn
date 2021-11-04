@@ -69,7 +69,16 @@ module.exports = {
 					// Creates `style` nodes from JS strings
 					'style-loader',
 					// Translates CSS into CommonJS
-					'css-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 2,
+							// 0 => no loaders (default);
+							// 1 => postcss-loader;
+							// 2 => postcss-loader, sass-loader
+							modules: true, // 默认是 false ***
+						},
+					},
 					// Compiles Sass to CSS
 					'sass-loader',
 					'postcss-loader',
