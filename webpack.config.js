@@ -22,6 +22,11 @@ module.exports = {
         generator: {
           filename: "images/[name]_[hash][ext]", // 独立的配置
         },
+				parser: {
+					dataUrlCondition: {
+						maxSize: 8 * 1024 // 8kb （低于8kb都会压缩成 base64）
+					}
+				},
       },
 			// 字体文件
 			{
@@ -46,6 +51,11 @@ module.exports = {
             return miniSVGDataURI(content);
           },
         },
+				parser: {
+					dataUrlCondition: {
+						maxSize: 2 * 1024 // 2kb （低于2kb都会压缩）
+					}
+				},
       },
 		],
 	},
