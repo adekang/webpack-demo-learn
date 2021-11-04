@@ -4,11 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 	mode: 'development', // 'development' | 'production'
+	devtool: 'eval-cheap-module-source-map', // development
 	// entry: './src/index.js', // 入口文件（简写形式）
 	entry: {
 		main: './src/index.js',
 	},
 	output: {
+		clean: true,// Clean the output directory before emit.
 		path: path.resolve(__dirname, 'dist'), // 打包后的路径
 		filename: 'bundle.js', // 打包后的文件名
 		// 静态文件打包后的路径及文件名（默认是走全局的，如果有独立的设置就按照自己独立的设置来。）
@@ -89,9 +91,9 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new CleanWebpackPlugin(), // 在打包之前，清除输入目录下的文件
-    new HtmlWebpackPlugin({
-      template: "./src/index.html", // 这里设置自己模板文件
-    }),
-  ],
+		// new CleanWebpackPlugin(), // 在打包之前，清除输入目录下的文件
+		new HtmlWebpackPlugin({
+			template: './src/index.html', // 这里设置自己模板文件
+		}),
+	],
 }
