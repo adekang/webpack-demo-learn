@@ -1,6 +1,7 @@
 const path = require('path'); // node.js 的路径模块
 
 module.exports = {
+  mode: 'development', // 'development' | 'production'
   // entry: './src/index.js', // 入口文件（简写形式）
   entry: {
     main: './src/index.js',
