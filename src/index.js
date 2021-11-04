@@ -4,6 +4,8 @@ const sea = require('./assets/images/sea.svg')
 
 const root = document.getElementById('root')
 
+import "./assets/styles/reset.scss";
+
 // 插入一张图片
 const img = new Image()
 img.src = boat // 图片模块 dog1 作为 img 变量的 src 属性值
