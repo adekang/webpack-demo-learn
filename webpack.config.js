@@ -9,6 +9,11 @@ module.exports = {
 	entry: {
 		main: './src/index.js',
 	},
+	// Tree Shaking
+	optimization: {
+    usedExports: true,
+  },	
+	// dev 服务
 	devServer: {
 		static: {
       directory: path.join(__dirname, 'dist'),// 指定被访问html页面所在目录的路径
@@ -84,6 +89,7 @@ module.exports = {
 			{
 				test: /\.css$/i,
 				use: ['style-loader', 'css-loader'],
+				sideEffects: true // 这些文件不要 Tree Shaking。
 			},
 			// scss配置
 			{
