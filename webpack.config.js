@@ -9,6 +9,17 @@ module.exports = {
 	entry: {
 		main: './src/index.js',
 	},
+	devServer: {
+		static: {
+      directory: path.join(__dirname, 'dist'),// 指定被访问html页面所在目录的路径
+    }, 
+		client: {
+      progress: true, // 在浏览器中以百分比显示编译进度。
+    },
+    open: true, // 开启服务器时，自动打开页面
+    compress: true, // 开启 gzip 压缩
+    port: 8888, // 自定义端口号
+  },
 	output: {
 		clean: true,// Clean the output directory before emit.
 		path: path.resolve(__dirname, 'dist'), // 打包后的路径
@@ -96,4 +107,5 @@ module.exports = {
 			template: './src/index.html', // 这里设置自己模板文件
 		}),
 	],
+
 }
