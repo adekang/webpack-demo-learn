@@ -11,6 +11,11 @@ const devConfig = {
   optimization: {
     usedExports: true
   },
+  resolve: {
+		alias: {
+      '@': path.resolve(__dirname, '../src'),
+    },
+  },
   // source-map
   devtool: 'eval-cheap-module-source-map',
   // 开发服务器

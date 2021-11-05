@@ -73,7 +73,7 @@ module.exports = {
 				test: /\.(txt|xml)$/i,
 				type: 'asset/source', // 一般会转换成 "asset/source"
 			},
-			// svg文件
+			// svg文件最小化
 			{
 				test: /\.svg$/i,
 				type: 'asset',
