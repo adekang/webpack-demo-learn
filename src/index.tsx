@@ -1,4 +1,9 @@
-const a = '132'
-console.log(a);
+// packages/home/index.jsx
+import React from 'react'
+import ReactDom from 'react-dom'
 
-import './assets/styles/global.scss';
+const Element = () => {
+	return <div>hello</div>
+}
+
+ReactDom.render(<Element />, document.getElementById('root'))
