@@ -13,3 +13,4 @@ img.width = 200
 root.append(img)
 // svg
 console.log('svg::', sea)
+console.log('svg111')

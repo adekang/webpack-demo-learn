@@ -30,6 +30,14 @@ module.exports = {
 	// *** 模块选项中匹配的文件会通过 loaders 来转换！
 	module: {
 		rules: [
+			//  处理es6+
+			{
+				test: /\.m?js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader'
+				}
+			},
 			// 图片文件
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
