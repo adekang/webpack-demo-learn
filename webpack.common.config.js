@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // 入口文件
-  entry: './src/index.js',
+  entry: './src/index',
   // 输出文件
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -12,16 +12,40 @@ module.exports = {
     assetModuleFilename: 'assets/[name]_[hash][ext]',
     clean: true,
   },
+	resolve: {
+    extensions: ['.js', '.ts', '.tsx']
+  },
   // 模块
   module: {
     rules: [
 			//  处理es6+
 			{
-				test: /\.m?js$/,
+				test: /\.(js|mjs)$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader'
 				}
+			},
+			//  ts配置
+			{
+				test: /\.(jsx|ts|tsx)$/,
+				use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+          {
+            loader: 'ts-loader',
+            options: {
+              compilerOptions: {
+                noEmit: false,
+              },
+            },
+          },
+        ],
+				exclude: /node_modules/
 			},
 			// 图片文件
 			{
