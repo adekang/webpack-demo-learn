@@ -13,7 +13,7 @@ const devConfig = {
   },
   resolve: {
 		alias: {
-      '@': path.resolve(__dirname, '../src'),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   // source-map
