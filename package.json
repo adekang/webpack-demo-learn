@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "webpack serve --config webpack.dev.config.js",
-		"build": "webpack --config webpack.prod.config.js"
+		"build": "webpack --config webpack.prod.config.js",
+		"lint": "eslint --ext .ts,.tsx,.js,.jsx --format codeframe"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.16.0",
@@ -20,6 +21,7 @@
 		"clean-webpack-plugin": "^4.0.0",
 		"css-loader": "^6.5.1",
 		"eslint": "^8.1.0",
+		"eslint-formatter-codeframe": "^7.32.1",
 		"html-webpack-plugin": "^5.5.0",
 		"mini-css-extract-plugin": "^2.4.4",
 		"mini-svg-data-uri": "^1.4.3",
