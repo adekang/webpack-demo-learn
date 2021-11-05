@@ -2896,6 +2896,13 @@ mimic-fn@^2.1.0:
   resolved "https://registry.nlark.com/mimic-fn/download/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=
 
+mini-css-extract-plugin@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.npmmirror.com/mini-css-extract-plugin/download/mini-css-extract-plugin-2.4.4.tgz#c7e5d2d931dcf100ae50ae949ba757c506b54b0f"
+  integrity sha1-x+XS2THc8QCuUK6Um6dXxQa1Sw8=
+  dependencies:
+    schema-utils "^3.1.0"
+
 mini-svg-data-uri@^1.4.3:
   version "1.4.3"
   resolved "https://registry.npmmirror.com/mini-svg-data-uri/download/mini-svg-data-uri-1.4.3.tgz#43177b2e93766ba338931a3e2a84a3dfd3a222b8"
