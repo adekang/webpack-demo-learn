@@ -10,7 +10,7 @@ function App() {
       <hr />
       <img src={aSvg} alt='' />
       <hr />
-      <h1>hello</h1>
+      <h1>App</h1>
     </div>
   )
 }
