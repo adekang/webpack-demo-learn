@@ -4,13 +4,15 @@ const aSvg = require('@/assets/images/sea.Svg')
 import '@/assets/styles/global.scss'
 
 function App() {
-	return (
-		<div>
-			<Header />
-			<img src={aSvg} alt='' />
-			<h1>hello</h1>
-		</div>
-	)
+  return (
+    <div>
+      <Header />
+      <hr />
+      <img src={aSvg} alt='' />
+      <hr />
+      <h1>hello</h1>
+    </div>
+  )
 }
 
 export default App
